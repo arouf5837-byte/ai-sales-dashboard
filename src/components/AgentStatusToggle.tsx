@@ -32,7 +32,7 @@ export default function AgentStatusToggle({ clientId, isActive, isLocked = false
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col items-center justify-center gap-1">
       <button
         onClick={handleToggle}
         disabled={isPending || isLocked}
@@ -60,10 +60,10 @@ export default function AgentStatusToggle({ clientId, isActive, isLocked = false
           )}
         </span>
       </button>
-      <span className="text-sm font-medium text-gray-700">
-        {optimisticStatus ? 'Agent Active' : 'Agent Paused'}
+      <span className={`text-[10px] font-extrabold tracking-widest leading-none ${optimisticStatus ? 'text-indigo-600' : 'text-gray-500'}`}>
+        {optimisticStatus ? 'ON' : 'OFF'}
       </span>
-      {error && <span className="text-xs text-red-500 ml-2">{error}</span>}
+      {error && <span className="text-xs text-red-500 mt-1">{error}</span>}
     </div>
   )
 }

@@ -23,7 +23,7 @@ export default async function ProductsPage() {
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Products</h2>
-          <p className="mt-1 text-sm text-gray-500">প্রোডাক্ট অ্যাড, এডিট বা ডিলিট করুন এবং প্রোডাক্টের সাথে অ্যাড আইডি (Ad ID) অ্যাসাইন করুন!!</p>
+          <p className="mt-1 text-sm text-gray-500">আপনার ইনভেন্টরি / প্রোডাক্টস অ্যাড, এডিট বা ডিলিট করুন এবং ফেসবুক অ্যাড আইডির সাথে প্রোডাক্টগুলো যুক্ত করুন।</p>
         </div>
         <Link
           href="/dashboard/products/new"
