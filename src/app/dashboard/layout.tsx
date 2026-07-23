@@ -78,36 +78,41 @@ export default async function DashboardLayout({
             </div>
           </div>
         )}
-        <header className="bg-white shadow-sm z-10">
-          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <header className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-10 shadow-sm">
+          <div className="max-w-7xl mx-auto py-4 px-6 lg:px-8 flex justify-between items-center">
             <div className="flex items-center">
-              <h1 className="text-lg font-semibold text-gray-900">Dashboard</h1>
+              <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">Dashboard</h1>
               {!hasClient ? (
-                <span className="ml-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 border border-indigo-200">
-                  <Info className="w-3 h-3 mr-1" />
+                <span className="ml-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200 shadow-sm">
+                  <Info className="w-3.5 h-3.5 mr-1.5" />
                   Setup your AI Sales Agent
                 </span>
               ) : (
-                <div className="ml-4 flex items-center">
+                <div className="ml-5 flex items-center">
                   <AgentStatusToggle 
                     clientId={clientUser.client_id} 
                     isActive={isActive}
                     isLocked={isPaymentLocked}
                   />
                   {isPaymentLocked && (
-                    <span className="ml-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">
+                    <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-50 text-red-700 border border-red-200 shadow-sm animate-pulse">
                       Payment Locked
                     </span>
                   )}
                 </div>
               )}
             </div>
-            <div className="text-sm text-gray-500">
-              {user.email}
+            <div className="flex items-center gap-3">
+              <div className="hidden sm:block text-sm font-medium text-gray-500 bg-gray-100/50 px-3 py-1.5 rounded-full border border-gray-200/50">
+                {user.email}
+              </div>
+              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                {user.email?.charAt(0).toUpperCase() || 'U'}
+              </div>
             </div>
           </div>
         </header>
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50/50">
           {!hasClient ? (
             <div className="w-full min-h-full py-8">
               <SetupAgentForm />

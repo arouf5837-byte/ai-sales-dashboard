@@ -21,7 +21,10 @@ export default async function ProductsPage() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-900">Products</h2>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">Products</h2>
+          <p className="mt-1 text-sm text-gray-500">প্রোডাক্ট অ্যাড, এডিট বা ডিলিট করুন এবং প্রোডাক্টের সাথে অ্যাড আইডি (Ad ID) অ্যাসাইন করুন!!</p>
+        </div>
         <Link
           href="/dashboard/products/new"
           className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
