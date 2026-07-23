@@ -52,7 +52,7 @@ export default async function AITrainingPage() {
             AI Training Context
           </h2>
           <p className="mt-2 text-sm text-gray-500">
-            View the rules, behavior, and information that powers your AI agent.
+            আপনার AI এজেন্টকে আপনার ব্যবসা সম্পর্কে শেখান, যাতে সে কাস্টমারদের সঠিক উত্তর দিতে পারে!
           </p>
         </div>
         

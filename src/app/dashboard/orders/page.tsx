@@ -36,7 +36,7 @@ export default async function OrdersPage() {
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Orders</h2>
         <p className="mt-1 text-sm text-gray-500">
-          Manage your customer orders, update statuses, and export data.
+          আপনার কাস্টমারদের করা সকল অর্ডারের তালিকা এবং তাদের বর্তমান অবস্থা এখান থেকে ম্যানেজ করুন।
         </p>
       </div>
 
